@@ -1,0 +1,85 @@
+
+@media screen and (max-width: 768px) {
+
+.navbar-open {
+	left:100vw;
+    margin-left: -80px;
+}
+    .external-link {} .menu-offset {
+        left: 0;
+    }
+    .navbar.navbar-fixed-top.slide-active {
+        position: fixed;
+    }
+   
+  
+    .sidebar-animate {
+        left: -100vw;
+    }
+	.
+    .side-bar-border {
+	
+        width: 100vw;
+        padding-right: 56px;
+		position:fixed;
+		z-index:14;
+		background:none;
+		height:100vh;
+		padding-bottom:0px;
+    }
+ 
+
+	.circle-hole{
+	position:fixed;
+	}
+	.circle-hole-border{
+	position:fixed;
+	}
+	.button-list{
+	bottom:0px;
+
+	right:0px;
+	}
+	
+	
+.content-container {
+top:0vh;
+width:100vw !important; 
+ left:0px;
+ top:0px;
+ }
+.menu-out {
+ 
+    left: 100vw !important;
+		margin-left:-60px;
+}
+.sidebar-out {
+
+    left: 0px !important;
+}
+.container-out { 
+	left: 100vw !important;
+
+}
+.header-body-text{
+padding-left:60px;
+width:none;	
+}
+.header-body{
+font-size:40px;
+color:white;
+}
+.text-body{
+margin-bottom:0px;
+width:100vw;
+padding:0;
+padding-left:10px;
+}
+.background-image{
+background:url('sea2.jpg');background-size:cover;background-repeat:no-repeat;width:100%;height:100%;position:absolute;left:0;top:0;
+}
+.notice{
+color:#23527c !important;
+}
+
+}

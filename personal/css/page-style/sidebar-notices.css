@@ -1,0 +1,114 @@
+.notice {
+    padding: 18px !important;
+ background:none;
+ color:#282828;
+	font-weight:550;
+	-webkit-transition: all .3s ease-in-out !important;
+        -moz-transition: all .3s ease-in-out !important;
+        -o-transition: all .3s ease-in-out !important;
+        transition: all .3s ease-in-out !important;
+		
+   
+    font-size: 1.3em;
+background:RGBA(255,255,255,1) !important;
+background:none;
+color:#141414;
+border-radius:5px;
+}
+.notice:hover{
+background:#ddd !important;
+}
+.notice-sm {
+    padding: 10px;
+    font-size: 80%;
+}
+.notice-lg {
+   
+    font-size: 1.3em;
+background:#ddd !important;
+color:#141414;
+}
+.notice-success {
+    border-color: #80D651;
+}
+.notice-success>strong {
+    color: #80D651;
+}
+.notice-info {
+    border-color: #45ABCD;
+}
+.notice-info>strong {
+    color: #45ABCD;
+}
+.notice-warning {
+    border-color: #FEAF20;
+}
+.notice-warning>strong {
+    color: #FEAF20;
+}
+.notice-danger {
+    border-color: #d73814;
+}
+.notice-danger>strong {
+    color: #d73814;
+}
+
+
+/*custom fonts - Bitter, Montserrat*/
+@import url('http://fonts.googleapis.com/css?family=Montserrat|Bitter');
+/*basic reset*/
+* {margin: 0; padding: 0;}
+body {
+	background: url('http://thecodeplayer.com/u/m/b1.png') no-repeat center center fixed;
+	background-size: cover;
+}
+
+h1 {
+	font: normal 32px/32px Bitter; color: white;
+	text-align: center; padding: 85px 100px;
+}
+
+/*nav styles*/
+ul {
+	background: white; 
+	width: 200px; margin: 0 auto;
+}
+ul li {
+	list-style-type: none;
+	/*relative positioning for list items along with overflow hidden to contain the overflowing ripple*/
+	position: relative;
+	overflow: hidden;
+}
+ul li a {
+	font: normal 14px/28px Montserrat; color: hsl(180, 40%, 40%);
+	display: block; padding: 10px 15px;
+	text-decoration: none;
+	cursor: pointer; /*since the links are dummy without href values*/
+	/*prevent text selection*/
+	user-select: none;
+	/*static positioned elements appear behind absolutely positioned siblings(.ink in this case) hence we will make the links relatively positioned to bring them above .ink*/
+	position: relative;
+}
+
+/*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
+.ink {
+	display: block; position: absolute;
+	background: hsl(180, 40%, 80%);
+	border-radius: 100%;
+	transform: scale(0);
+	z-index:20;
+	}
+/*animation effect*/
+.ink.animate {animation: ripple 0.65s linear;}
+@keyframes ripple {
+	/*scale the element to 250% to safely cover the entire link and fade it out*/
+	100% {opacity: 0; transform: scale(2.5);}
+}
+
+
+
+
+
+
+
+

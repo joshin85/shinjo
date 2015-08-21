@@ -1,148 +1,202 @@
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
-<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" type="images/png" href="http://www.clipartbest.com/cliparts/LiK/5Ar/LiK5ArXia.png"/>
 
-<link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css" />
 
-<script src="js/portfolio.js"></script>
-<link rel="stylesheet" href="css/page-style/page-style.css">
-<link rel="stylesheet" href="css/page-style/sidebar-notices.css">
-<link rel="stylesheet" href="css/page-style/mobile.css">
-<style>
-
-
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/portfolio.js"></script>
+    <link rel="stylesheet" href="css/page-style/page-style.css">
+    <link rel="stylesheet" href="css/page-style/sidebar-notices.css">
+    <link rel="stylesheet" href="css/page-style/mobile.css">
+    <style>
     </style>
 
 </head>
-<body >
-<div style="width:100%;height:77px;background:#fff;box-shadow:2px 2px 2px RGBA(0,0,0,.4);position:absolute;top:0;z-index:13">
-<a class="navbar-toggle nav-animate"> 
-			<span class="navmenu-button">
+
+<body>
+    <div class="header fast-animate"></div>
+    <a class="navbar-toggle nav-animate">
+        <span class="navmenu-button">
       <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-	  </span>
-     </a>	
-</div>
-<div class="bottom-bar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </span>
+    </a>
+    </div>
+    <div class="bottom-bar  ">
 
 
 
-<div class="hidden-mail mail-div">
-<input type="text" placeholder=" Name" class="form" style="border:none;border-bottom:3px solid #009688;margin-top:100px;margin-left:20px;width:80vw;background:none"/>
-<div class="form-group" style="margin-left:20px;margin-top:20px;width:80vw;border-bottom:3px solid #009688;">
+        <div class="mail-div">
+			<div style="display:inline-block">
+            <input type="text" placeholder=" Name" class="form input-style" />
+            <div class="form-group textarea-style">
+                <textarea class="form-control message" placeholder=" Message" rows="5" id="comment" ></textarea>
+            </div>
+            <div class="material-flat send-button">
+                <span class=" material-button">Send &nbsp;<span class="fa fa-chevron-right"></span></span>
+            </div>
+			</div>
+        </div>
+    </div>
 
-  <textarea class="form-control" placeholder=" Message" rows="5" id="comment" style="border:none;font-size:42px;padding:0;background:none"></textarea>
-</div>
-<div style="height:85px;width:100%;background:#29B6F6;bottom:0;position:absolute"></div>
-</div>
-</div>
-<div class="button-list ">
-  
-<div class="btn-border-two btn-header-pos external-link">
+    <div class="  mail-bottom-bar"></div>
+    <div class="button-list ">
 
-<a href="https://github.com/" class="circle-button material-animation">
+        <div class="btn-border-two btn-header-pos external-link">
 
-<span class="fa fa-github "></span>
-</a>
-</div>
+            <a href="#" class="circle-button material-animation	mail">
+                <span class="fa fa-envelope "></span>
+            </a>
+        </div>
 
-<div class="btn-border-one btn-header-pos external-link" >
+    </div>
 
-<a href="#" class="circle-button material-animation" >
+    <div id="sidebar" class="side-bar-border sidebar-animate">
 
- <span class="fa fa-linkedin-square"></span></a>
-</div>
-<div class="btn-border-two btn-header-pos external-link">
-
-<a href="#" class="circle-button material-animation	mail">
-<span class="fa fa-envelope "></span></a>
- </div>
-
-</div>
-
-<div id="sidebar" class="side-bar-border sidebar-animate">
-
-<div class="bs-sidebar affix side-bar-style " id="my_blue_nav">
-    <ul class="nav bs-sidenav">
-		<!--   <li class="side-item-style" >
+        <div class="bs-sidebar affix side-bar-style " id="my_blue_nav">
+            <ul class="nav bs-sidenav">
+                <!--   <li class="side-item-style" >
 		   <a class="page-font portrait" href="#" >
 			  <span class="fa fa-user fa-5x" style="color:rgb(67, 67, 72);margin-top:20px;z-index:11;position:relative;"></span>
 		   <span style="position:absolute;top:0px;left:0px; width:100px;height:100px;border-radius:100px;background:RGBA(0,0,0,0);border:00px solid white;z-index:12"></span>
 		   </a></li>-->
-	   <li class="side-item-style">
-			<a class="page-font notice notice-lg notice-info" href="#" id="scale">
-				<span class="fa fa-home"></span>&nbsp;&nbsp;	Home</a></li>
-        <li class=" side-item-style "><a class="page-font notice notice-info" href="#" id="scale">
-				About Me</a></li>
-		<li style="border-top:1px solid #ddd;height:10px"><li>
-        <li class="side-item-style"><a class="page-font notice notice-info " href="#">Control Hub</a></li>
-		 <li class="side-item-style"><a class="page-font notice notice-info" href="#">Portfolio</a></li>
-		 <li class="side-item-style"><a class="page-font notice notice-info" href="#">Backend</a></li>
-		 <li class="side-item-style"><a class="page-font notice notice-info" href="#">Javascript API</a></li>
-		  <li class="side-item-style"><a class="page-font notice notice-info" href="#">Ripify</a></li>
-		
-		
-		
-    </ul>
-</div>
-</div>
-<!--<span class="circle-hole sidebar-animate"></span>
+                <li class="side-item-style">
+                    <a class="page-font notice notice-lg notice-info" href="#home" id="scale">
+                        <span class="fa fa-home"></span>&nbsp;&nbsp;Home</a>
+                </li>
+                <li class=" side-item-style ">
+                    <a class="page-font notice notice-info" id="scale" href="#aboutMe">
+                        <span class="fa fa-bed"></span> &nbsp;About Me</a>
+                </li>
+                <li style="border-top:1px solid #ddd;height:0px">
+                    <li>
+                        <li class="side-item-style"><a class="page-font notice notice-info " href="#controlHub">Control Hub</a>
+                        </li>
+                        <li class="side-item-style"><a class="page-font notice notice-info" href="#">Portfolio</a>
+                        </li>
+                        <li class="side-item-style"><a class="page-font notice notice-info" href="#">Backend</a>
+                        </li>
+                        <li class="side-item-style"><a class="page-font notice notice-info" href="#">Javascript API</a>
+                        </li>
+                        <li class="side-item-style"><a class="page-font notice notice-info" href="#">Ripify</a>
+                        </li>
+
+
+
+            </ul>
+					<div class="sidebar-buttons">
+
+        <div class="btn-border-two btn-header-pos external-link">
+
+            <a href="https://github.com/" class="">
+
+                <span class="fa fa-github fa-4x"></span>
+            </a>
+        </div>
+
+        <div class="btn-border-one btn-header-pos external-link">
+
+            <a href="#" >
+
+                <span class="fa fa-linkedin-square fa-4x"></span>
+            </a>
+        </div>
+		</div>
+        </div>
+
+    </div>
+
+    <div class="offclick hide"></div>
+    <!--<span class="circle-hole sidebar-animate"></span>	
 <span class="circle-hole-border sidebar-animate"></span>-->
 
- 
-<div class="header-style page-font" >
 
-<div class="header-div"	>   
+    <div class="header-style page-font  ">
 
-<div class="" style="background:RGBA(0,0,0,.5)">
+        <div class="header-div">
 
- Shinjo Melosh
- </div>
-</div>
- 
-</div> 
-<section  style="background:url('images/0702141322.jpg');background:none;position:fixed;background-size:cover;background-repeat:no-repeat;width:100%;height:100%;left:0;top:0">
+            <div class="stripe fast-animate" style="background:RGBA(0,0,0,0)">
+
+              Shinjo Melosh
+            </div>
+        </div>
+
+    </div>	
+	<section class="top-offset" id="home">
 	
-</section>
-<section class="sect-style content-animate">
+	</section>
+	  <section class="sect-style content-animate" id="aboutMe">
 
-<div >
-<div class="header-body">
-<div class="header-body-text">Control Hub</div>
+        <div>
+            <div class="header-body">
+                <div class="header-body-text">About Me</div>
 
-</div>
+            </div>
 
-</div>
-<div class="row">
+        </div>
+        <div class="row">
 
-<div class="col-xs-4"><img src="images/centerb.png" style="max-width:250px;max-height:250px;margin:auto;width:100%;display:block"/></div>
-<div class="col-xs-8">	<p class="paragraph-style">Control Hub is an android application that is designed to allow users to take advantage of their mobile devices and use them as a proxy mouse and keyboard.
-Easy to use and set-up this software requires only that you have a wireless network and only asks access to your wifi. Both the server and the client are written using Java and a variety of third party libraries. </p>
-<br>
+            <div class="col-xs-4"><img src="images/centerb.png" style="max-width:250px;max-height:250px;margin:auto;width:100%;display:block" />
+            </div>
+            <div class="col-xs-8">
+                <p class="paragraph-style">Control Hub is an android application that is designed to allow users to take advantage of their mobile devices and use them as a proxy mouse and keyboard. Easy to use and set-up this software requires only that you have a wireless network and only asks access to your wifi. Both the server and the client are written using Java and a variety of third party libraries. </p>
+                <br>
 
 
-<p class="paragraph-style">
-The program allows for custom script execution(you have to write the scripts) which can be included using the command maker 
-</p>
-</div>
+                <p class="paragraph-style">
+                    The program allows for custom script execution(you have to write the scripts) which can be included using the command maker
+                </p>
+            </div>
 
-</div>
-</div>
+        </div>
+        </div>
 
-</section>
-<section>
+    </section>
+    <section class="sect-style content-animate  " id="controlHub">
 
-</section>
+        <div>
+            <div class="header-body">
+                <div class="header-body-text">Control Hub</div>
+
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-xs-4"><img src="images/centerb.png" style="max-width:250px;max-height:250px;margin:auto;width:100%;display:block" />
+            </div>
+            <div class="col-xs-8">
+                <p class="paragraph-style">Control Hub is an android application that is designed to allow users to take advantage of their mobile devices and use them as a proxy mouse and keyboard. Easy to use and set-up this software requires only that you have a wireless network and only asks access to your wifi. Both the server and the client are written using Java and a variety of third party libraries. </p>
+                <br>
+
+
+                <p class="paragraph-style">
+                    The program allows for custom script execution(you have to write the scripts) which can be included using the command maker
+                </p>
+            </div>
+
+        </div>
+        </div>
+
+    </section>
+ 
+    <section>
+
+    </section>
 
 </body>
+
 </html>

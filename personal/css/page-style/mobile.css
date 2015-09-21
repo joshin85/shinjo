@@ -59,7 +59,7 @@ width:100vw !important;
 height:10px !important;
 }
 .navmenu-button{
-	    margin-left: 21px;
+	margin-left: 21px;
     margin-top: 20px;
 }
 .header-small{
@@ -80,6 +80,7 @@ width:none;
 .header-body{
 font-size:40px;
 color:white;
+z-index:32;
 }
 .text-body{
 margin-bottom:0px;

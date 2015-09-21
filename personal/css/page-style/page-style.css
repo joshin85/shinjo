@@ -538,7 +538,7 @@ background:none;
 }
 .header-body {
 	position:relative;
-	z-index:32;
+	z-index:1;
 	background:  #282828;
     box-shadow: 3px 3px 15px RGBA(0, 0, 0, .4);
 }

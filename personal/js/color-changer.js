@@ -17,7 +17,7 @@ function colorChanger(target, Alternate){
 			var bg =  iter.css("background");	
 			if(typeof bestChoice === "undefined")
 				bestChoice = $(this)
-			else if(iter.css("z-index") > bestChoice.css("z-index"))
+			else if(iter.css("z-index") > bestChoice.css("z-index") && !$(this).hasClass("stripe"))
 				if(iter.css("background") !== "undefined" && bg.indexOf("rgba(0, 0, 0, 0)") == -1)
 					bestChoice = $(this)
 		}
@@ -26,25 +26,36 @@ function colorChanger(target, Alternate){
 	var split = contrast.split(")");
 	var split2 = split[0].split("(");
 	var colorArray = split2[1].split(",");
-	var invertedColor = "RGB(" + (255 - colorArray[0]) + ", " + (255 -  colorArray[1]) + ", "+ (255 - colorArray[2]) + ")";
-	var color = "RGB(" + (colorArray[0]) + ", " + (colorArray[1]) + ", "+ (colorArray[2]) + ")";
+	//var invertedColor = "RGB(" + (255 - colorArray[0]) + ", " + (255 -  colorArray[1]) + ", "+ (255 - colorArray[2]) + ")";
+	var invertedColor = "RGB(" + (colorArray[0] - 50) + ", " + (colorArray[1] - 50) + ", "+ (colorArray[2] - 50) + ")";
+	//var color = "RGB(" + (colorArray[0]) + ", " + (colorArray[1]) + ", "+ (colorArray[2]) + ")";
 	
-	Target.css("background", invertedColor);
-	Alternate.css("background",color);
-	$(".header-text-container").css("background", color);
-	$(".stripe").css("color", invertedColor);
+	//var color = "RGB(" + (colorArray[0] + 100) + ", " + (colorArray[1] + 100) + ", "+ (colorArray[2] + 100) + ")";
+	
 	if(darkOrLight(colorArray[0], colorArray[1], colorArray[2])){	
 		dark(Target);
+		var color = "#000";
 	}else { 
 		light(Target);
-}
+		var color = "#fff";
+	}
+	Target.css("background",color);
+	Alternate.css("background",invertedColor);
+	$(".stripe").css("background", invertedColor);
+	$(".stripe").css("color", color);
+	if($(".header-small").length == 0){
+		$(".stripe").css("background","none");
+		$(".stripe").css("color","white");
+		$(".stripe").css("box-shadow","none");
+		
+		}
 }
 
 function dark(){
-	$(".header-text-container").css("box-shadow","0px 5px 2px RGBA(0,0,0,.2)");
+	$(".stripe").css("box-shadow","0px 5px 2px RGBA(0,0,0,.2)");
 }
 function light(){
-	$(".header-text-container").css("box-shadow","none");
+	//$(".stripe").css("box-shadow","none");
 
 }
 //taken from http://stackoverflow.com/questions/5650924/javascript-color-contraster

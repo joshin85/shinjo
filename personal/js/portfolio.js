@@ -8,21 +8,26 @@ $(document).ready(function() {
         if ($(".stripe").offset().top - $(window).scrollTop() < 0 && !$(".header-style").is(".header-fixed")) {
             $(".header-style").addClass("header-fixed");
 			$(".header").addClass("header-down");
-			$(".header-text-container").removeClass("hidden");
+			$(".stripe").addClass("header-small");
         } else if ($(window).scrollTop() < headerOffset) {
             $(".header-style").removeClass("header-fixed");
 			$(".header").removeClass("header-down");
 			
-			$(".header-text-container").addClass("hidden");
-        }
+			$(".header-small").removeClass("header-small");
+			$(".stripe").css("background","none");
+		}
 		i++;
 		if(i % 1 == 0)
 			colorChanger(".navmenu-button", ".icon-bar");
 		$("section").each(function(){
-			if($(".header-text-container").offset().top + 10 > $(this).offset().top &&  $(".header-text-container").offset().top < $(this).offset().top + $(this).height()){
-				var text = $(this).find(".header-body-text").text();
-				if(text.length > 0)
-				$(".stripe").html("Shinjo Melosh <span class='fa fa-chevron-right header-fa'></span> " + text)
+			if($(".stripe").offset().top + 10 > $(this).offset().top &&  $(".stripe").offset().top < $(this).offset().top + $(this).height()){
+				var text = $(this).prev().find(".header-body-text").text();
+				if(text.length > 0){
+				if(window.innerWidth > 768)
+					$(".stripe").html("Shinjo Melosh <span class='fa fa-chevron-right header-fa'></span> " + text)
+				else
+					$(".stripe").html(text)
+					}
 				else 
 				$(".stripe").html("Shinjo Melosh");	
 			}
@@ -93,7 +98,7 @@ $(document).ready(function() {
         var $anchor = $(this);
 		scrollEnabled = false;
         $('html, body').stop().animate({
-            scrollTop: (parseInt($($anchor.attr('href')).offset().top) ) + "px"
+            scrollTop: (parseInt($($anchor.attr('href')).offset().top) ) - $(".header").height() + "px"
 			
         }, 1500, 'easeInOutExpo',function(){
 			scrollEnabled = true;

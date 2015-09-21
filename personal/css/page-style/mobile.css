@@ -56,7 +56,14 @@ width:100vw !important;
 		margin-left:-60px;
 }
 .header{
-height:50px !important;
+height:10px !important;
+}
+.navmenu-button{
+	    margin-left: 21px;
+    margin-top: 20px;
+}
+.header-small{
+	margin-top:20px !important;
 }
 .sidebar-out {
 

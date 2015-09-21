@@ -322,6 +322,17 @@ font-size:2em !important;
 	line-height:42px;
 	vertical-align:middle;
 }
+.header-style .header-div .header-small{
+	display: inline-block;
+    padding-right: 15px;
+    padding-left: 70px;
+	padding-top:3px;
+	padding-bottom:3px;
+    float: left;
+	margin-top:15px;
+    margin-left: 15px;
+    background: rgb(40, 40, 40);
+}
 .content-container {
     left: 270px;
     top: 150px;
@@ -369,7 +380,7 @@ transform:-ms-translate3d(0px, 77px, 0);
 .navbar-toggle {
     padding	: 0;
     display: initial;
-    z-index: 32;
+    z-index: 33;
     position: fixed !important;
     margin: none !important;
     margin-top: 20px;
@@ -389,7 +400,7 @@ transform:-ms-translate3d(0px, 77px, 0);
 .navmenu-button {
     background: none;
     border-radius: 0px;
-		
+	margin-top:8px;
     display: inline-block;
     padding: 10px;
     -webkit-transition: all .2s ease-in-out !important;
@@ -526,6 +537,8 @@ background:none;
     border-radius: 150px;
 }
 .header-body {
+	position:relative;
+	z-index:32;
 	background:  #282828;
     box-shadow: 3px 3px 15px RGBA(0, 0, 0, .4);
 }
@@ -661,6 +674,9 @@ border:none;font-size:42px;padding:0;background:none;
     animation: highlight 15s;
     -webkit-animation: highlight 15s;
     /* Chrome, Safari, Opera */
+}
+.stripe{
+	background:none;
 }
 @media screen and (min-width: 768px) {
 	.sidebar-buttons{

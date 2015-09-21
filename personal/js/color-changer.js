@@ -1,7 +1,7 @@
 
-function colorChanger(target, alternet){
+function colorChanger(target, Alternate){
 	var Target = $(target);
-	var Alternet = $(alternet);
+	var Alternate = $(Alternate);
 	var offsetTop = Target.offset().top;
 	var offsetLeft = Target.offset().left;
 	var width = Target.width();
@@ -26,7 +26,38 @@ function colorChanger(target, alternet){
 	var split = contrast.split(")");
 	var split2 = split[0].split("(");
 	var colorArray = split2[1].split(",");
-	Target.css("background", "RGB(" + (255 - colorArray[0]) + ", " + (255 -  colorArray[1]) + ", "+ (255 - colorArray[2]) + ")");
-	Alternet.css("background","RGB(" + (colorArray[0]) + ", " + (colorArray[1]) + ", "+ (colorArray[2]) + ")");
+	var invertedColor = "RGB(" + (255 - colorArray[0]) + ", " + (255 -  colorArray[1]) + ", "+ (255 - colorArray[2]) + ")";
+	var color = "RGB(" + (colorArray[0]) + ", " + (colorArray[1]) + ", "+ (colorArray[2]) + ")";
 	
-}	
+	Target.css("background", invertedColor);
+	Alternate.css("background",color);
+	$(".header-text-container").css("background", color);
+	$(".stripe").css("color", invertedColor);
+	if(darkOrLight(colorArray[0], colorArray[1], colorArray[2])){	
+		dark(Target);
+	}else { 
+		light(Target);
+}
+}
+
+function dark(){
+	$(".header-text-container").css("box-shadow","0px 5px 2px RGBA(0,0,0,.2)");
+}
+function light(){
+	$(".header-text-container").css("box-shadow","none");
+
+}
+//taken from http://stackoverflow.com/questions/5650924/javascript-color-contraster
+var darkOrLight = function(red, green, blue) {
+  var brightness;
+  brightness = (red * 299) + (green * 587) + (blue * 114);
+  brightness = brightness / 255000;
+
+  // values range from 0 to 1
+  // anything greater than 0.5 should be bright enough for dark text
+  if (brightness >= 0.5) {
+    return true;//"dark-text";
+  } else {
+    return false;//"light-text";
+  }
+}

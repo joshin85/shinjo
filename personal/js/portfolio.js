@@ -1,9 +1,35 @@
+//vars
+var loadPath = "192.168.1.61/shinjo/personal/"
+
 $(document).ready(function() {
-    var headerOffset = parseInt($(".stripe").offset().top);
+
+/* Change position of title to fixed based on scroll */
+    attachEventListeners();
+	
+});
+function message(respObj){
+	alert("Message Sent");
+}
+function doPost(url, method, callback, data){
+	phr = new XMLHttpRequest();
+	phr.open(method, loadPath + url, true);
+	phr.send(data);
+	phr.onreadystatechange = function() {
+		if (phr.readyState == 4 && phr.status == 200) {
+			callback(phr.responseText);
+		}
+	}
+}
+function attachEventListeners(){
+	var headerOffset = parseInt($(".stripe").offset().top);
 	var i = 0;
 	var scrollEnabled = true;
-/* Change position of title to fixed based on scroll */
-    $(window).scroll(function() {
+	$(".send-button").click(function(){
+		var formid = document.getElementById("msgForm");
+		var formdata = new FormData(formid);
+		doPost("post/sendMessage.php", "post", message, formdata)
+	});
+	$(window).scroll(function() {
 		if(scrollEnabled){
         if ($(".stripe").offset().top - $(window).scrollTop() < 0 && !$(".header-style").is(".header-fixed")) {
             $(".header-style").addClass("header-fixed");
@@ -13,6 +39,7 @@ $(document).ready(function() {
             $(".header-style").removeClass("header-fixed");
 			$(".header").removeClass("header-down");
 			$(".header-small").removeClass("header-small");
+			$(".stripe").css("border", "");
 			$(".stripe").css("background","none");
 		}
 		i++;
@@ -22,9 +49,10 @@ $(document).ready(function() {
 			if($(".stripe").offset().top + $(".header-body").height() + 10 > $(this).offset().top &&  $(".stripe").offset().top < $(this).offset().top + $(this).height()){
 				var text = $(this).prev().find(".header-body-text").text();
 				if(text.length > 0){
-				if(window.innerWidth > 768)
+				if(window.innerWidth > 10){
+					console.log("sdf");
 					$(".stripe").html("Shinjo Melosh <span class='fa fa-chevron-right header-fa'></span> " + text)
-				else
+				}else
 					$(".stripe").html(text)
 					}
 				else 
@@ -105,8 +133,7 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-
-});
+}
 /* Open side menu */
 function slideMenu() {
     $(".offclick").toggleClass("hide");

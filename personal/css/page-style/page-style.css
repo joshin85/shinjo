@@ -332,6 +332,7 @@ font-size:2em !important;
 	margin-top:15px;
     margin-left: 15px;
     background: rgb(40, 40, 40);
+	border:1px solid #ddd;
 }
 .content-container {
     left: 270px;
@@ -550,7 +551,7 @@ background:none;
     position: absolute;
     bottom: 0px;
     height: 70px;
-    background: #fff;
+    background: #000;
     width: 100%;
     z-index: 26;
     font-size: 3em;

@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -9,6 +8,7 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <!-- Latest compiled and minified JavaScript -->
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <link rel="shortcut icon" type="images/png" href="http://www.clipartbest.com/cliparts/LiK/5Ar/LiK5ArXia.png"/>
 
@@ -25,6 +25,7 @@
 </head>
 
 <body>
+<div class="message-container"></div>
     <div class="header fast-animate"></div>
     <a class="navbar-toggle nav-animate">
         <span class="navmenu-button">
@@ -41,6 +42,9 @@
 
         <div class="mail-div">
 			<div style="display:inline-block">
+				<div class="pulse-loader hidden" >
+				Loading...
+				</div>
 			<form name="msgForm" id="msgForm">
             <input type="text" placeholder=" Name" name="sender" class="form input-style" />
 			 <input type="text" placeholder=" Subject" name="subject" class="form input-style" />

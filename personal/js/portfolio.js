@@ -11,8 +11,9 @@ function message(respObj){
 	alert("Message Sent");
 }
 function doPost(url, method, callback, data){
+	console.log(url);
 	phr = new XMLHttpRequest();
-	phr.open(method, loadPath + url, true);
+	phr.open(method,url, true);
 	phr.send(data);
 	phr.onreadystatechange = function() {
 		if (phr.readyState == 4 && phr.status == 200) {

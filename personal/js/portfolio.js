@@ -1,14 +1,15 @@
 //vars
 var loadPath = "192.168.1.61/shinjo/personal/"
-
+var id=0;
 $(document).ready(function() {
-
 /* Change position of title to fixed based on scroll */
     attachEventListeners();
 	
 });
 function message(respObj){
-	alert("Message Sent");
+		$("#msgForm").css("visibility","visible");
+		$(".pulse-loader").addClass("hidden");
+		createMessage(respObj);
 }
 function doPost(url, method, callback, data){
 	console.log(url);
@@ -21,14 +22,32 @@ function doPost(url, method, callback, data){
 		}
 	}
 }
+function createMessage(message){
+	$(".message-container").append("<div class='message-notification' id='msg-"+id+"'>" + message + "</div>");
+	var t = id;
+	setTimeout(function(){
+		deleteMessage($("#msg-" + t));
+	}, 5000);
+	id++;
+}
+function deleteMessage(target){
+	console.log("hello");
+	target.addClass("message-slideoff");
+	setTimeout(function(){target.remove();
+	}, 500);
+}
 function attachEventListeners(){
 	var headerOffset = parseInt($(".stripe").offset().top);
+	
 	var i = 0;
 	var scrollEnabled = true;
 	$(".send-button").click(function(){
-		var formid = document.getElementById("msgForm");
-		var formdata = new FormData(formid);
-		doPost("post/sendMessage.php", "post", message, formdata)
+			$(".pulse-loader").removeClass("hidden");
+			$("#msgForm").css("visibility","hidden");
+			var formid = document.getElementById("msgForm");
+			var formdata = new FormData(formid);
+			doPost("post/sendMessage.php", "post", message, formdata)
+	
 	});
 	$(window).scroll(function() {
 		if(scrollEnabled){

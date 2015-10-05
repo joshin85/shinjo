@@ -324,6 +324,13 @@ font-size:2em !important;
     z-index: 5;
     overflow: hidden;
 }
+.close-not{
+	cursor:pointer;
+	float:right;
+	vertical-align:middle;
+	color:white;
+	line-height:35px;
+}
 .header-fa{
 	font-size:14px;
 	line-height:42px;
@@ -340,6 +347,7 @@ font-size:2em !important;
     margin-left: 15px;
     background: rgb(40, 40, 40);
 	border:1px solid #ddd;
+	box-shadow:4px 8px 3px RGBA(0,0,0,.2);
 }
 .content-container {
     left: 270px;
@@ -573,21 +581,16 @@ background:none;
 }
 .message-container{
 	width: 300px;
-<<<<<<< HEAD
-    position: absolute;
+
     top: 0px;
     right: 0px;
     height: 300px;
 	z-index:100;
-	
-=======
     position: fixed;
-    top: 0px;
-margin-top:10px; 
-   right: 0px;
-    height: 300px;
+	margin-top:10px; 
+    height: auto;
 	z-index:100;
->>>>>>> origin/master
+
 }
 .message-slideoff{
 	transform:translate3d(500px, 0px, 0);
@@ -597,12 +600,15 @@ margin-top:10px;
     -moz-transition: all .5s ease-in-out !important;
     -o-transition: all .5s ease-in-out !important;
     transition: all .5s ease-in-out !important;
-    background: white;
+    background: #009688;
+	color:white;
     margin: 15px;
     width: 250px;
     font-size: 25px;
     padding: 5px;
-    border: 1px solid #ddd;
+	padding-left:15px;
+    border: 1px solid #008577;
+	box-shadow:2px 10px 3px RGBA(0,0,0,.2);
 }
 .send-button{
 position:relative;
@@ -611,6 +617,7 @@ display:inline-block;
 overflow:hidden;
 margin-left:20px;
 float:right;
+margin-right:200px;
 }
 .mail-bottom-bar {
     height: 85px;
@@ -820,8 +827,8 @@ border:none;font-size:42px;padding:0;background:none;
     -webkit-box-shadow: #009688 0 0 0px 25px inset;
     box-shadow: #009688 0 0 0px 25px inset;
   }
-<<<<<<< HEAD
+
 }
-=======
+
 }
->>>>>>> origin/master
+

@@ -1,8 +1,5 @@
 var loadPath = "192.168.1.61/shinjo/personal/"
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 var id=0;
 $(document).ready(function() {
 /* Change position of title to fixed based on scroll */
@@ -10,7 +7,7 @@ $(document).ready(function() {
 	
 });
 function message(respObj){
-		$("#msgForm").css("visibility","visible");
+		$("#msgForm").css("opacity","1");
 		$(".pulse-loader").addClass("hidden");
 		createMessage(respObj);
 }
@@ -26,7 +23,10 @@ function doPost(url, method, callback, data){
 	}
 }
 function createMessage(message){
-	$(".message-container").append("<div class='message-notification' id='msg-"+id+"'>" + message + "</div>");
+	$(".message-container").append("<div class='message-notification' id='msg-"+id+"'>" + message + "<span class='close-not'>&times;</span></div>");
+	$(".close-not").click(function(){
+		$(this).parent().remove();
+	});
 	var t = id;
 	setTimeout(function(){
 		deleteMessage($("#msg-" + t));
@@ -34,7 +34,6 @@ function createMessage(message){
 	id++;
 }
 function deleteMessage(target){
-	console.log("hello");
 	target.addClass("message-slideoff");
 	setTimeout(function(){target.remove();
 	}, 500);
@@ -46,7 +45,7 @@ function attachEventListeners(){
 	var scrollEnabled = true;
 	$(".send-button").click(function(){
 			$(".pulse-loader").removeClass("hidden");
-			$("#msgForm").css("visibility","hidden");
+				$("#msgForm").css("opacity",".3");
 			var formid = document.getElementById("msgForm");
 			var formdata = new FormData(formid);
 			doPost("post/sendMessage.php", "post", message, formdata)
@@ -72,7 +71,7 @@ function attachEventListeners(){
 			if($(".stripe").offset().top + $(".header-body").height() + 10 > $(this).offset().top &&  $(".stripe").offset().top < $(this).offset().top + $(this).height()){
 				var text = $(this).prev().find(".header-body-text").text();
 				if(text.length > 0){
-				if(window.innerWidth > 10){
+				if(window.innerWidth > 768){
 					console.log("sdf");
 					$(".stripe").html("Shinjo Melosh <span class='fa fa-chevron-right header-fa'></span> " + text)
 				}else

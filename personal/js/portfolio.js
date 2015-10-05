@@ -1,5 +1,8 @@
-//vars
 var loadPath = "192.168.1.61/shinjo/personal/"
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 var id=0;
 $(document).ready(function() {
 /* Change position of title to fixed based on scroll */

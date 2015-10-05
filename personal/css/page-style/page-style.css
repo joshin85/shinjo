@@ -573,12 +573,21 @@ background:none;
 }
 .message-container{
 	width: 300px;
+<<<<<<< HEAD
     position: absolute;
     top: 0px;
     right: 0px;
     height: 300px;
 	z-index:100;
 	
+=======
+    position: fixed;
+    top: 0px;
+margin-top:10px; 
+   right: 0px;
+    height: 300px;
+	z-index:100;
+>>>>>>> origin/master
 }
 .message-slideoff{
 	transform:translate3d(500px, 0px, 0);
@@ -666,6 +675,7 @@ border:none;font-size:42px;padding:0;background:none;
     margin-left: 20px;
     width: 80vw;
     background: none;
+    margin-bottom:20px;
 }
 @-webkit-keyframes highlight {
     0% {
@@ -810,4 +820,8 @@ border:none;font-size:42px;padding:0;background:none;
     -webkit-box-shadow: #009688 0 0 0px 25px inset;
     box-shadow: #009688 0 0 0px 25px inset;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

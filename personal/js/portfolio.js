@@ -25,7 +25,7 @@ function doPost(url, method, callback, data){
 function createMessage(message){
 	$(".message-container").append("<div class='message-notification' id='msg-"+id+"'>" + message + "<span class='close-not'>&times;</span></div>");
 	$(".close-not").click(function(){
-		$(this).parent().remove();
+		deleteMessage($("#msg-" + t));
 	});
 	var t = id;
 	setTimeout(function(){

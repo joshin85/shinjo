@@ -24,10 +24,10 @@ function doPost(url, method, callback, data){
 }
 function createMessage(message){
 	$(".message-container").append("<div class='message-notification' id='msg-"+id+"'>" + message + "<span class='close-not'>&times;</span></div>");
+		var t = id;
 	$(".close-not").click(function(){
-		deleteMessage($("#msg-" + t));
+		deleteMessage($(this).parent());
 	});
-	var t = id;
 	setTimeout(function(){
 		deleteMessage($("#msg-" + t));
 	}, 5000);

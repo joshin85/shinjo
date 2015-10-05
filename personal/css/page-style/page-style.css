@@ -593,7 +593,7 @@ background:none;
 
 }
 .message-slideoff{
-	transform:translate3d(500px, 0px, 0);
+	transform:translate3d(300px, 0px, 0);
 }
 .message-notification{
 	  -webkit-transition: all .5s ease-in-out !important;

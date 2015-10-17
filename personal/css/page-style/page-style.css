@@ -18,7 +18,7 @@ body {
 /* Image taken from nasa pictures (public domain)
 http://apod.nasa.gov/apod/ap150617.html 
 */
-    background: url('../../images/m45_lorenzi_3832.jpg') no-repeat center center fixed;
+    background: url('../../images/PgYKaSd.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 textarea:focus,
@@ -385,7 +385,9 @@ font-size:2em !important;
 	width:100%;
 	
     background: #29B6F6;
+	background:none;
     box-shadow: 2px 2px 2px RGBA(0, 0, 0, .4);
+	box-shadow:none;
     position: fixed;
     z-index: 28;
 	 top:-77px;

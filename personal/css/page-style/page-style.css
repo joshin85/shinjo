@@ -347,7 +347,7 @@ font-size:2em !important;
     margin-left: 15px;
     background: rgb(40, 40, 40);
 	border:1px solid #ddd;
-	box-shadow:4px 8px 3px RGBA(0,0,0,.2);
+	/*box-shadow:4px 8px 3px RGBA(0,0,0,.2);*/
 }
 .content-container {
     left: 270px;
@@ -379,7 +379,7 @@ font-size:2em !important;
     height: 77px;
 	/**/
 	width:100%;
-	height:10px;
+	
     background: #29B6F6;
     box-shadow: 2px 2px 2px RGBA(0, 0, 0, .4);
     position: fixed;
@@ -407,10 +407,11 @@ transform:-ms-translate3d(0px, 77px, 0);
 }
 .navmenu-button:hover {
     background: #009688;
+	box-shadow:3px 3px 3px RGBA(0,0,0,.2);
 }
 .navmenu-button:hover span {
     background: white;
-	box-shadow:2px 1px 2px RGBA(0,0,0,.4);
+	box-shadow:3px 3px 3px RGBA(0,0,0,.2);
 }
 
 .navmenu-button {
@@ -518,7 +519,6 @@ transform:-ms-translate3d(0px, 77px, 0);
 .header-style {
     background: none;
     display: table;
-    overflow: hidden;
     height: 100%;
    
 }
@@ -723,7 +723,12 @@ border:none;font-size:42px;padding:0;background:none;
     -webkit-animation: highlight 15s;
     /* Chrome, Safari, Opera */
 }
+.stripe:hover{
+	box-shadow:3px 3px 3px RGBA(0,0,0,.2);
+}
 .stripe{
+	cursor:pointer;
+	line-height:51px;
 	background:none;
 }
 @media screen and (min-width: 768px) {
@@ -751,6 +756,7 @@ border:none;font-size:42px;padding:0;background:none;
         margin-left: 100px;
     }
     .navmenu-button {
+		cursor:pointer;
         z-index: 21;
 		background:white;
         margin-left: -80px;

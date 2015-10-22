@@ -20,14 +20,14 @@ function colorChanger(target, Alternate){
 				bestChoice = iter
 			//	console.log("SETTING DEFAULT " + iter.attr("class"));
 			}
-			else if(iter.css("z-index") > bestChoice.css("z-index") && !$(this).hasClass("stripe") && $(this).height())
+			else if(iter.css("z-index") > bestChoice.css("z-index") && !$(this).hasClass("ignore") && $(this).height())
 				if(iter.css("background") !== "undefined" && bg.indexOf("rgba(0, 0, 0, 0)") == -1){
 					console.log( bg.indexOf("rgba(0, 0, 0, 0)"));
 					bestChoice = iter;
 					}
 		}
 	});
-	//console.log(bestChoice.attr("class") + " " + bestChoice.css("background"));
+	console.log(bestChoice.attr("class") + " " + bestChoice.css("background"));
 	var contrast = bestChoice.css("background");
 	var split = contrast.split(")");
 	var split2 = split[0].split("(");
@@ -44,7 +44,7 @@ function colorChanger(target, Alternate){
 	var invertedColor = "RGB(" + red + ", " + blue + ", "+  green + ")";
 	//var color = "RGB(" + (colorArray[0]) + ", " + (colorArray[1]) + ", "+ (colorArray[2]) + ")";
 	
-	//console.log(invertedColor);
+	console.log(invertedColor);
 	//var color = "RGB(" + (colorArray[0] + 100) + ", " + (colorArray[1] + 100) + ", "+ (colorArray[2] + 100) + ")";
 	
 	if(darkOrLight(red,blue,green)){	
@@ -71,7 +71,7 @@ function getColor(val, change){
 	return (((val - change) < 0) ? 0 : Math.floor((val - change))); 
 }
 function dark(){
-	$(".stripe").css("box-shadow","0px 0px 2px RGBA(0,0,0,.2)");
+	//$(".stripe").css("box-shadow","0px 0px 2px RGBA(0,0,0,.2)");
 }
 function light(){
 	//$(".stripe").css("box-shadow","none");

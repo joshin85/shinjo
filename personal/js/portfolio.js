@@ -63,6 +63,7 @@ function attachEventListeners(){
 			$(".header-small").removeClass("header-small");
 			$(".stripe").css("border", "");
 			$(".stripe").css("background","none");
+			$(".stripe").html("Shinjo Melosh");
 		}
 		i++;
 		if(i % 1 == 0)
@@ -72,13 +73,12 @@ function attachEventListeners(){
 				var text = $(this).prev().find(".header-body-text").text();
 				if(text.length > 0){
 				if(window.innerWidth > 768){
-					console.log("sdf");
 					$(".stripe").html("Shinjo Melosh <span class='fa fa-chevron-right header-fa'></span> " + text)
+					$(".stripe").attr("href", "#" + $(this).attr("id"));
 				}else
 					$(".stripe").html(text)
 					}
-				else 
-				$(".stripe").html("Shinjo Melosh");	
+				
 			}
 		});
 		}

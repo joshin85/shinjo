@@ -347,7 +347,7 @@ font-size:2em !important;
 	padding-top:3px;
 	padding-bottom:3px;
     float: left;
-	margin-top:15px;
+	margin-top:0px;
     margin-left: 15px;
     background: rgb(40, 40, 40);
 	border:1px solid #ddd;
@@ -423,7 +423,6 @@ transform:-ms-translate3d(0px, 77px, 0);
 .navmenu-button {
     background: none;
     border-radius: 0px;
-	margin-top:8px;
     display: inline-block;
     padding: 10px;
     -webkit-transition: all .2s ease-in-out !important;
@@ -736,8 +735,10 @@ border:none;font-size:42px;padding:0;background:none;
 }
 .stripe{
 	cursor:pointer;
-	line-height:51px;
 	background:none;
+	padding: 0 35px 0 65px;
+    height: 45px;
+    line-height: 38px;
 }
 @media screen and (min-width: 768px) {
 	.sidebar-buttons{

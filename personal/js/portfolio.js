@@ -43,6 +43,15 @@ function attachEventListeners(){
 	
 	var i = 0;
 	var scrollEnabled = true;
+	$(".stripe").on('click',function(e){
+		e.preventDefault();
+		 $('html, body').stop().animate({
+            scrollTop: (parseInt($($(this).attr('href')).offset().top) ) - $(".header").height() - $(".header-body").height() + "px"
+			
+        }, 1500, 'easeInOutExpo',function(){
+			scrollEnabled = true;
+		});
+	});
 	$(".send-button").click(function(){
 			$(".pulse-loader").removeClass("hidden");
 				$("#msgForm").css("opacity",".3");
@@ -165,7 +174,4 @@ function slideMenu() {
     $('.navbar-toggle').toggleClass("navbar-open");
 
 }
-//jQuery to collapse the navbar on scroll
-$(window).scroll(function() {
 
-});

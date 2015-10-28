@@ -60,6 +60,10 @@ html {
 .bs-sidebar .nav > .active > ul {
     margin-bottom: 8px;
 }
+.fixed-background{
+	z-index:1;
+	width:100%;height:100%;position:fixed;top:100vh;left:0
+}
 .background-image {
     background-image: url('sea2.jpg');
     background-size: 100vh 100vw;
@@ -536,6 +540,8 @@ background:none;
 .sect-style {
     min-height: 100vh;
     background: #fff;
+	position:relative;
+	z-index:1;
    }
 .circle-hole-border {
     position: absolute;

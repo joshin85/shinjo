@@ -16,18 +16,20 @@ function colorChanger(target, Alternate){
 		var iterHeight = iter.height();
 		if(iterTop < offsetTop && iterTop + iterHeight > offsetTop + height && offsetLeft > iterLeft && offsetLeft + width < iterLeft + iterWidth){
 			var bg =  iter.css("background");	
-			if(typeof bestChoice === "undefined"){
-				bestChoice = iter
-			//	console.log("SETTING DEFAULT " + iter.attr("class"));
-			}
+			if(typeof bestChoice === "undefined")
+				if($(this).hasClass("ignore")){
+			
+				} else {
+					bestChoice = iter;
+				}
 			else if(iter.css("z-index") > bestChoice.css("z-index") && !$(this).hasClass("ignore") && $(this).height())
-				if(iter.css("background") !== "undefined" && bg.indexOf("rgba(0, 0, 0, 0)") == -1){
+				if(iter.css("background") != "undefined" && bg.indexOf("rgba(0, 0, 0, 0)") == -1){
 					console.log( bg.indexOf("rgba(0, 0, 0, 0)"));
 					bestChoice = iter;
 					}
 		}
 	});
-	console.log(bestChoice.attr("class") + " " + bestChoice.css("background"));
+	console.log("id = " + bestChoice.attr("id") + " " + bestChoice.attr("class") + " " + bestChoice.css("background"));
 	var contrast = bestChoice.css("background");
 	var split = contrast.split(")");
 	var split2 = split[0].split("(");

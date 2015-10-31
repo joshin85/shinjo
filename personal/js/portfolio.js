@@ -4,8 +4,19 @@ var id=0;
 $(document).ready(function() {
 /* Change position of title to fixed based on scroll */
     attachEventListeners();
-	
+	var k = localStorage.getItem("gameOptions")
+	if(k == null)
+		console.log("not set");
+	//loadGameOptions();
 });
+ function loadGameOptions(){
+    var gameOptions = {'music':false} ;
+    if(localStorage.getItem('gameOptions') == null)
+        localStorage.setItem('gameOptions', gameOptions) ;
+    else 
+        gameOptions = localStorage.getItem('gameOptions');
+	console.log("LAODING");
+    }
 function message(respObj){
 		$("#msgForm").css("opacity","1");
 		$(".pulse-loader").addClass("hidden");
@@ -60,6 +71,16 @@ function attachEventListeners(){
 			doPost("post/sendMessage.php", "post", message, formdata)
 	
 	});
+	$(".open-codeblock").on('click', function(){
+			$(this).find("span").toggleClass("rotate-chevron");
+			$(this).parent().toggleClass("sect-shifted");
+			var id = $(this).parent().attr("id");
+			$("[data-section=" + id +"]").toggleClass("codeblock-shifted");
+			//$(".fixed-background").each(function(){
+			//	if($(this).data("section") == id)
+					//$(this).toggleClass("codeblock-shifted");
+		//	})
+	});
 	$(window).scroll(function() {
 		if(scrollEnabled){
         if ($(".stripe").offset().top - $(window).scrollTop() < 0 && !$(".header-style").is(".header-fixed")) {
@@ -76,7 +97,7 @@ function attachEventListeners(){
 		}
 		i++;
 		if(i % 1 == 0)
-			colorChanger(".navmenu-button", ".icon-bar");
+			//colorChanger(".navmenu-button", ".icon-bar");
 		$("section").each(function(){
 			if($(".stripe").offset().top + $(".header-body").height() + 10 > $(this).offset().top &&  $(".stripe").offset().top < $(this).offset().top + $(this).height()){
 				var text = $(this).prev().find(".header-body-text").text();

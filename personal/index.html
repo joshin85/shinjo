@@ -1,314 +1,339 @@
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <!-- Latest compiled and minified JavaScript --><link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/8.9.1/styles/default.min.css">
-<script src="https://cdn.jsdelivr.net/highlight.js/8.9.1/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-<link rel="shortcut icon" type="images/png" href="http://www.clipartbest.com/cliparts/LiK/5Ar/LiK5ArXia.png"/>
-
-    <link rel="stylesheet" href="css/font-awesome.css" />
-	<script src="js/color-changer.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/portfolio.js"></script>
-    <link rel="stylesheet" href="css/page-style/page-style.css">
-    <link rel="stylesheet" href="css/page-style/sidebar-notices.css">
-    <link rel="stylesheet" href="css/page-style/mobile.css">
-    <style>
-    </style>
-
-</head>
-
-<body>
-<div class="message-container"></div>
-    <div class="header fast-animate"></div>
-    <a class="navbar-toggle nav-animate">
-        <span class="navmenu-button">
+   <head>
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+      <!-- Latest compiled and minified JavaScript -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/8.9.1/styles/default.min.css">
+      <script src="https://cdn.jsdelivr.net/highlight.js/8.9.1/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+      <link rel="shortcut icon" type="images/png" href="http://www.clipartbest.com/cliparts/LiK/5Ar/LiK5ArXia.png"/>
+      <link rel="stylesheet" href="css/font-awesome.css" />
+      <script src="js/color-changer.js"></script>
+      <script src="js/jquery.easing.min.js"></script>
+      <script src="js/portfolio.js"></script>
+      <link rel="stylesheet" href="css/page-style/page-style.css">
+      <link rel="stylesheet" href="css/page-style/sidebar-notices.css">
+      <link rel="stylesheet" href="css/page-style/mobile.css">
+      <style>
+      </style>
+   </head>
+   <body>
+      <div class="message-container"></div>
+      <div class="header fast-animate"></div>
+      <a class="navbar-toggle nav-animate">
+      <span class="navmenu-button">
       <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        </span>
-    </a>
-    </div>
-    <div class="bottom-bar ignore">
-        <div class="mail-div ignore">
-			<div style="display:inline-block">
-				<div class="pulse-loader hidden ignore" >
-				Loading...
-				</div>
-			<form name="msgForm" id="msgForm">
-            <input type="text" placeholder=" Name" name="sender" class="form input-style" />
-			 <input type="text" placeholder=" Subject" name="subject" class="form input-style" />
-            <div class="form-group textarea-style">
-                <textarea class="form-control message" name="msg" 	placeholder=" Message" rows="5" id="comment" ></textarea>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </span>
+      </a>
+      </div>
+      <div class="bottom-bar ignore">
+         <div class="mail-div ignore">
+            <div style="display:inline-block">
+               <div class="pulse-loader hidden ignore" >
+                  Loading...
+               </div>
+               <form name="msgForm" id="msgForm">
+               <input type="text" placeholder=" Name" name="sender" class="form input-style" />
+               <input type="text" placeholder=" Subject" name="subject" class="form input-style" />
+               <div class="form-group textarea-style">
+                  <textarea class="form-control message" name="msg" 	placeholder=" Message" rows="5" id="comment" ></textarea>
+               </div>
+               <div class="material-flat send-button">
+                  <span class=" material-button">Send &nbsp;<span class="fa fa-chevron-right"></span></span>
+               </div>
             </div>
-            <div class="material-flat send-button">
-                <span class=" material-button">Send &nbsp;<span class="fa fa-chevron-right"></span></span>
-            </div>
-			</div>
-        </div>
-    </div>
-
-    <div class="  mail-bottom-bar"></div>
-    <div class="button-list ">
-
-        <div class="btn-border-two btn-header-pos external-link">
-
+         </div>
+      </div>
+      <div class="  mail-bottom-bar"></div>
+      <div class="button-list ">
+         <div class="btn-border-two btn-header-pos external-link">
             <a href="#" class="circle-button material-animation	mail">
-                <span class="fa fa-envelope "></span>
+            <span class="fa fa-envelope "></span>
             </a>
-        </div>
-
-    </div>
-
-    <div id="sidebar" class="side-bar-border sidebar-animate">
-
-        <div class="bs-sidebar affix side-bar-style " id="my_blue_nav">
+         </div>
+      </div>
+      <div id="sidebar" class="side-bar-border sidebar-animate">
+         <div class="bs-sidebar affix side-bar-style " id="my_blue_nav">
             <ul class="nav bs-sidenav">
-                <!--   <li class="side-item-style" >
-		   <a class="page-font portrait" href="#" >
-			  <span class="fa fa-user fa-5x" style="color:rgb(67, 67, 72);margin-top:20px;z-index:11;position:relative;"></span>
-		   <span style="position:absolute;top:0px;left:0px; width:100px;height:100px;border-radius:100px;background:RGBA(0,0,0,0);border:00px solid white;z-index:12"></span>
-		   </a></li>-->
-                <li class="side-item-style">
-                    <a class="page-font notice notice-lg notice-info" href="#home" id="scale">
-                        <span class="fa fa-home"></span>&nbsp;&nbsp;Home</a>
-                </li>
-                <li class=" side-item-style ">
-                    <a class="page-font notice notice-info" id="scale" href="#aboutMe">
-                        <span class="fa fa-bed"></span> &nbsp;About Me</a>
-                </li>
-                <li style="border-top:1px solid #ddd;height:0px">
-                    <li>
-                        <li class="side-item-style"><a class="page-font notice notice-info " href="#controlHub">Control Hub</a>
-                        </li>
-                        <li class="side-item-style"><a class="page-font notice notice-info" href="#">Portfolio</a>
-                        </li>
-                        <li class="side-item-style"><a class="page-font notice notice-info" href="#">Backend</a>
-                        </li>
-                        <li class="side-item-style"><a class="page-font notice notice-info" href="#">Javascript API</a>
-                        </li>
-                        <li class="side-item-style"><a class="page-font notice notice-info" href="#">Ripify</a>
-                        </li>
-
-
-
+               <!--   <li class="side-item-style" >
+                  <a class="page-font portrait" href="#" >
+                  <span class="fa fa-user fa-5x" style="color:rgb(67, 67, 72);margin-top:20px;z-index:11;position:relative;"></span>
+                  <span style="position:absolute;top:0px;left:0px; width:100px;height:100px;border-radius:100px;background:RGBA(0,0,0,0);border:00px solid white;z-index:12"></span>
+                  </a></li>-->
+               <li class="side-item-style">
+                  <a class="page-font notice notice-lg notice-info" href="#home" id="scale">
+                  <span class="fa fa-home"></span>&nbsp;&nbsp;Home</a>
+               </li>
+               <li class=" side-item-style ">
+                  <a class="page-font notice notice-info" id="scale" href="#aboutMe">
+                  <span class="fa fa-bed"></span> &nbsp;About Me</a>
+               </li>
+               <li style="border-top:1px solid #ddd;height:0px">
+               <li>
+               <li class="side-item-style"><a class="page-font notice notice-info " href="#controlHub">Control Hub</a>
+               </li>
+               <li class="side-item-style"><a class="page-font notice notice-info" href="#">Portfolio</a>
+               </li>
+               <li class="side-item-style"><a class="page-font notice notice-info" href="#">Backend</a>
+               </li>
+               <li class="side-item-style"><a class="page-font notice notice-info" href="#">Javascript API</a>
+               </li>
+               <li class="side-item-style"><a class="page-font notice notice-info" href="#">Ripify</a>
+               </li>
             </ul>
-					<div class="sidebar-buttons">
-
-        <div class="btn-border-two btn-header-pos external-link">
-
-            <a href="https://github.com/" class="">
-
-                <span class="fa fa-github fa-4x"></span>
-            </a>
-        </div>
-
-        <div class="btn-border-one btn-header-pos external-link">
-
-            <a href="#" >
-
-                <span class="fa fa-linkedin-square fa-4x"></span>
-            </a>
-        </div>
-		</div>
-        </div>
-
-    </div>
-
-    <div class="offclick hide ignore"></div>
-    <!--<span class="circle-hole sidebar-animate"></span>	
-<span class="circle-hole-border sidebar-animate"></span>-->
-
-
-    <div class="header-style page-font ignore">
-
-        <div class="header-div ignore">
-
+            <div class="sidebar-buttons">
+               <div class="btn-border-two btn-header-pos external-link">
+                  <a href="https://github.com/" class="">
+                  <span class="fa fa-github fa-4x"></span>
+                  </a>
+               </div>
+               <div class="btn-border-one btn-header-pos external-link">
+                  <a href="#" >
+                  <span class="fa fa-linkedin-square fa-4x"></span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+	  </div>
+      <div class="offclick hide ignore"></div>
+      <!--<span class="circle-hole sidebar-animate"></span>	
+         <span class="circle-hole-border sidebar-animate"></span>-->
+      <div class="header-style page-font ignore">
+         <div class="header-div ignore">
             <a class="stripe fast-animate ignore" style="background:RGBA(0,0,0,0)">
-              Shinjo Melosh
+            Shinjo Melosh
             </a>
-        </div>
-
-    </div>	
-	<div class="top-offset" id="home">
-	
-	</div>
-   <div>
-            <div class="header-body">
-                <div class="header-body-text">About Me</div>
-
-            </div>
-
-        </div>	
-	<section class="sect-style content-animate" id="aboutMe">
-
-  
-        <div class="row">
-
-            <div class="col-xs-4"><img src="images/centerb.png" style="max-width:250px;max-height:250px;margin:auto;width:100%;display:block" />
-            </div>
-            <div class="col-xs-8">
-                <p class="paragraph-style">Control Hub is an android application that is designed to allow users to take advantage of their mobile devices and use them as a proxy mouse and keyboard. Easy to use and set-up this software requires only that you have a wireless network and only asks access to your wifi. Both the server and the client are written using Java and a variety of third party libraries. </p>
-                <br>
-
-
-                <p class="paragraph-style">
-<pre><code class="java">				
-public static void main(String[] args){
-	System.out.println("Hello World!");				
-}
-					</pre></code>
-                    The program allows for custom script execution(you have to write the scripts) which can be included using the command maker
-                </p>
-            </div>
-
-        </div>
-        </section>
-
-    </div>
-
-        <div>
-            <div class="header-body">
-                <div class="header-body-text">Control Hub</div>
-
-            </div>
-
-        </div>
-    <section class="sect-style content-animate" id="controlHub">
-<span class="open-codeblock"><span class="fa fa-chevron-left"></span></span>
-
-<div class="fixed-background fixed-controlhub" data-section="controlHub">
-
-<pre><code>				
-function colorChanger(target, Alternate){
-	var Target = $(target);
-	var Alternate = $(Alternate);
-	var offsetTop = Target.offset().top;
-	var offsetLeft = Target.offset().left;
-	var width = Target.width();
-	var height = Target.height();
-	var bestChoice;
-	
-	$("div, section").each(function(){
-		var iter = $(this);
-		var iterTop = iter.offset().top;
-		var iterLeft = iter.offset().left;
-		var iterWidth = iter.width();
-		var iterHeight = iter.height();
-		if(iterTop < offsetTop && iterTop + iterHeight > offsetTop + height && offsetLeft > iterLeft && offsetLeft + width < iterLeft + iterWidth){
-			var bg =  iter.css("background");	
-			if(typeof bestChoice === "undefined")
-				if($(this).hasClass("ignore")){
-			
-				} else {
-					bestChoice = iter;
+         </div>
+      </div>
+      <div class="top-offset" id="home">
+      </div>
+    
+      </div>
+      <div>
+	  <div class="backdrop hidden"></div>
+         <div class="header-body">
+            <div class="header-body-text">About Me</div>
+         </div>
+      </div>
+	        <section class="section-container" id="aboutMe">
+         <div class="sect-style content-animate">
+            <span class="open-codeblock"><span class="fa fa-chevron-left"></span></span>
+            <div class="code-slider fixed-controlhub" data-section="controlHub">
+               <div class="nav-code">
+                  <div class="material-flat">
+                     <span class=" material-button">testing.js &nbsp;</span>
+                  </div>
+                  <div class="material-flat">
+                     <span class=" material-button">portfolio.js &nbsp;</span>
+                  </div>
+                  <div class="material-flat">
+                     <span class=" material-button">portfolio.js &nbsp;</span>
+                  </div>
+                  <div class="material-flat">
+                     <span class=" material-button">portfolio.js &nbsp;</span>
+                  </div>
+               </div>
+               <pre>
+			   <code>				
+				function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
 				}
-			else if(iter.css("z-index") > bestChoice.css("z-index") && !$(this).hasClass("ignore") && $(this).height())
-				if(iter.css("background") != "undefined" && bg.indexOf("rgba(0, 0, 0, 0)") == -1){
-					console.log( bg.indexOf("rgba(0, 0, 0, 0)"));
-					bestChoice = iter;
-					}
-		}
-	});
-	console.log("id = " + bestChoice.attr("id") + " " + bestChoice.attr("class") + " " + bestChoice.css("background"));
-	var contrast = bestChoice.css("background");
-	var split = contrast.split(")");
-	var split2 = split[0].split("(");
-	var colorArray = split2[1].split(",");
-	//rgb(41, 182, 246);
-	var sum = (colorArray[0] - 1) + ( colorArray[1] - 1) + (colorArray[2] - 1); 
-	var change = sum / 6;
-	var red = getColor(0, change);
-	var blue = getColor(150, change);
-	var green = getColor(136, change);
-	//console.log(change);
-	//var invertedColor = "RGB(" + (255 - colorArray[0]) + ", " + (255 -  colorArray[1]) + ", "+ (255 - colorArray[2]) + ")";
-	//var invertedColor = "RGB(" + (41 + (50 - )colorArray[0] - 50) + ", " + (colorArray[1] - 50) + ", "+ (colorArray[2] - 50) + ")";
-	var invertedColor = "RGB(" + red + ", " + blue + ", "+  green + ")";
-	//var color = "RGB(" + (colorArray[0]) + ", " + (colorArray[1]) + ", "+ (colorArray[2]) + ")";
-	
-	console.log(invertedColor);
-	//var color = "RGB(" + (colorArray[0] + 100) + ", " + (colorArray[1] + 100) + ", "+ (colorArray[2] + 100) + ")";
-	
-	if(darkOrLight(red,blue,green)){	
-		dark(Target);
-		var color = "#fff";
-	}else { 
-		light(Target);
-		var color = "#fff";
-	}
-	Target.css("background",invertedColor);
-	Alternate.css("background",color);
-	$(".stripe").css("background", color);
-	$(".stripe").css("color", invertedColor);
-//	$(".stripe").css("border", "1px solid #ddd");
-	$(".icon-bar").css("background", color);
-	if($(".header-small").length == 0){
-		$(".stripe").css("background","none");
-		$(".stripe").css("color","white");
-		$(".stripe").css(" ","none");
-		}
-}
-function getColor(val, change){
-	
-	return (((val - change) < 0) ? 0 : Math.floor((val - change))); 
-}
-function dark(){
-	//$(".stripe").css("box-shadow","0px 0px 2px RGBA(0,0,0,.2)");
-}
-function light(){
-	//$(".stripe").css("box-shadow","none");
+function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}	
+function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}	function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}	
+function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}	
+function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}	function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}	function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}	function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}	function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}	function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}	function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}	function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}	function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}					
 
-}
-//taken from http://stackoverflow.com/questions/5650924/javascript-color-contraster
-var darkOrLight = function(red, green, blue) {
-  var brightness;
-  brightness = (red * 299) + (green * 587) + (blue * 114);
-  brightness = brightness / 255000;
-
-  // values range from 0 to 1
-  // anything greater than 0.5 should be bright enough for dark text
-  if (brightness >= 0.5) {
-    return true;//"dark-text";
-  } else {
-    return false;//"light-text";
-  }
-}
-					</code></pre>
-
-</div>
-        <div class="row">
-
-            <div class="col-xs-4"><img src="images/centerb.png" style="max-width:250px;max-height:250px;margin:auto;width:100%;display:block" />
+				</code>
+				</pre>
             </div>
-            <div class="col-xs-8">
-                <p class="paragraph-style">Control Hub is an android application that is designed to allow users to take advantage of their mobile devices and use them as a proxy mouse and keyboard. Easy to use and set-up this software requires only that you have a wireless network and only asks access to your wifi. Both the server and the client are written using Java and a variety of third party libraries. </p>
-                <br>
-
-
-                <p class="paragraph-style">
-                    The program allows for custom script execution(you have to write the scripts) which can be included using the command maker
-                </p>
+            <div class="row">
+			<div class='backdrop hidden'></div>
+               <div class="col-xs-4"><img src="images/centerb.png" style="max-width:250px;max-height:250px;margin:auto;width:100%;display:block" />
+               </div>
+               <div class="col-xs-8">
+                  <p class="paragraph-style">Control Hub is an android application that is designed to allow users to take advantage of their mobile devices and use them as a proxy mouse and keyboard. Easy to use and set-up this software requires only that you have a wireless network and only asks access to your wifi. Both the server and the client are written using Java and a variety of third party libraries. </p>
+                  <br>
+                  <p class="paragraph-style">
+                     The program allows for custom script execution(you have to write the scripts) which can be included using the command maker
+                  </p>
+               </div>
             </div>
+         </div>
+      </section>
+	   <div>
+         <div class="header-body">
+            <div class="header-body-text">Control Hub</div>
+         </div>
+      </div>
+      <section class="section-container" id="controlHub">
+         <div class="sect-style content-animate">
+            <span class="open-codeblock"><span class="fa fa-chevron-left"></span></span>
+            <div class="code-slider fixed-controlhub" data-section="controlHub">
+               <div class="nav-code">
+                  <div class="material-flat">
+                     <span class=" material-button">testing.js &nbsp;</span>
+                  </div>
+                  <div class="material-flat">
+                     <span class=" material-button">portfolio.js &nbsp;</span>
+                  </div>
+                  <div class="material-flat">
+                     <span class=" material-button">portfolio.js &nbsp;</span>
+                  </div>
+                  <div class="material-flat">
+                     <span class=" material-button">portfolio.js &nbsp;</span>
+                  </div>
+               </div>
+               <pre>
+			   <code>				
+				function colorChanger(target, Alternate){
+					var Target = $(target);
+					var Alternate = $(Alternate);
+					var offsetTop = Target.offset().top;
+					var offsetLeft = Target.offset().left;
+					var width = Target.width();
+					var height = Target.height();
+					var bestChoice;
+				}	
 
-        </div>
-        </section>
-
-    </div>
- 
-    <div>
-
-    </div>
-	
-</body>
-
+				</code>
+				</pre>
+            </div>
+            <div class="row">
+				<div class='backdrop hidden'></div>
+               <div class="col-xs-4"><img src="images/centerb.png" style="max-width:250px;max-height:250px;margin:auto;width:100%;display:block" />
+               </div>
+               <div class="col-xs-8">
+                  <p class="paragraph-style">Control Hub is an android application that is designed to allow users to take advantage of their mobile devices and use them as a proxy mouse and keyboard. Easy to use and set-up this software requires only that you have a wireless network and only asks access to your wifi. Both the server and the client are written using Java and a variety of third party libraries. </p>
+                  <br>
+                  <p class="paragraph-style">
+                     The program allows for custom script execution(you have to write the scripts) which can be included using the command maker
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+      </div>
+      <div>
+      </div>
+   </body>
 </html>

@@ -7,6 +7,7 @@ $(document).ready(function() {
 	var k = localStorage.getItem("gameOptions")
 	if(k == null)
 		console.log("not set");
+	
 	//loadGameOptions();
 });
  function loadGameOptions(){
@@ -71,15 +72,30 @@ function attachEventListeners(){
 			doPost("post/sendMessage.php", "post", message, formdata)
 	
 	});
+	$('.backdrop').on('mouseover', function(){
+			$('.backdrop').addClass("hidden");
+			$(this).parent().parent().removeClass("bring-to-front");
+	});
+	$(".code-slider").on('mouseover', function(){
+		if($(this).parent().find('.open-codeblock span').hasClass("rotate-chevron")){
+			$('.backdrop').removeClass("hidden");
+			$(this).parent().parent().addClass("bring-to-front");
+		}
+	});
 	$(".open-codeblock").on('click', function(){
 			$(this).find("span").toggleClass("rotate-chevron");
+		
 			$(this).parent().toggleClass("sect-shifted");
 			var id = $(this).parent().attr("id");
-			$("[data-section=" + id +"]").toggleClass("codeblock-shifted");
+			//$("[data-section=" + id +"]").toggleClass("codeblock-shifted");
 			//$(".fixed-background").each(function(){
 			//	if($(this).data("section") == id)
 					//$(this).toggleClass("codeblock-shifted");
 		//	})
+	});
+	$(".nav-code .material-flat").on('click', function(){
+		$(".material-flat").removeClass("active");
+		$(this).addClass("active");
 	});
 	$(window).scroll(function() {
 		if(scrollEnabled){
